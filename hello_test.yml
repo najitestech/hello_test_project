@@ -5,7 +5,7 @@
   become_user: postgres
   tasks:
   - name: Check location
-    command: hostname
+    command: pwd
     register: hostname
     
   - name: Creat a directory
