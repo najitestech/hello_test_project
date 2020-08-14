@@ -14,7 +14,7 @@
     
   - name: Creat a directory
     file:
-      path: /var/lib/pgsql/Ansible_dir
+      path: /tmp/awx_289_7_n41bwp/project/Ansible_dir
       mode: 0755
       state: directory
     register: dir
