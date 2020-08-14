@@ -4,29 +4,28 @@
   connection: local
   gather_facts: no
   become_user: postgres
-  tasks: 
-  - name: Adding hosts to dynamic inventory
-    add_host:
-      name: "{{ item }}"
-      groups: dynamic
-    with_items: "{{ hostname }}"
-    changed_when: false
-  tags:
-    - always
-    
+  tasks:
   - name: Check User
     shell: whoami
     register: user
+#  - name: Adding hosts to dynamic inventory
+#    add_host:
+#      name: "{{ item }}"
+#      groups: dynamic
+#    with_items: "{{ hostname }}"
+#    changed_when: false
+#  tags:
+#    - always
 
-- name: Running 'Test' test Playbook
-  hosts: dynamic
-  ignore_unreachable: false
-  gather_facts: true
-  gather_subset:
-    - '!all'
-    - min
-    - hardware
-  serial: "100%"
+#- name: Running 'Test' test Playbook
+#  hosts: dynamic
+#  ignore_unreachable: false
+#  gather_facts: true
+#  gather_subset:
+#    - '!all'
+#    - min
+#    - hardware
+#  serial: "100%"
 
   roles:
     - name: roles/postgres
