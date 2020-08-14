@@ -1,11 +1,11 @@
 ---
-- name: Simple select query to "{{ db_name }}" db
+- name: Simple select query to {{ db_name }} db
   postgresql_query:
     db: "{{ db_name }}"
     query: SELECT version()
   register: version
 
-- name: Create tablein the "{{ db_name }}" database
+- name: Create tablein the {{ db_name }} database
   postgresql_table:
     db: "{{ db_name }}"
     name: "{{ table }}"
