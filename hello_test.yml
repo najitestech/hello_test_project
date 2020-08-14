@@ -1,5 +1,5 @@
 - name: Hello World Sample
-  hosts: localhost
+  hosts: hostname
   connection: local
   gather_facts: true
   become_user: awx
@@ -7,4 +7,3 @@
   - name: Hello Message
     debug:
       msg: "Hello Ansible_Tower!"
-    delegate_to: 192.168.0.102
