@@ -1,12 +1,8 @@
 ---
 - name: Check location
   command: hostname
-  register: pwd
+  register: hostname
   delegate_to: 192.168.0.102
-  
-- name: Debugging location outputs
-  debug:
-    var: pwd
   
 - name: Simple select query to {{ db_name }} db
   postgresql_query:
