@@ -4,6 +4,10 @@
   gather_facts: true
   become_user: awx
   tasks:
+  - name: Check location
+    command: hostname
+    register: hostname
+  
   - name: Hello Message
     debug:
       msg: "Hello Ansible_Tower!"
