@@ -5,9 +5,9 @@
   gather_facts: no
   become_user: postgres
   tasks:
-  - name: Check User
-    shell: whoami
-    register: user
+    - name: Check User
+      command: whoami
+      register: user
 #  - name: Adding hosts to dynamic inventory
 #    add_host:
 #      name: "{{ item }}"
