@@ -1,8 +1,7 @@
 ---
 - name: Check location
-  command: pwd
+  command: hostname
   register: pwd
-  delegate_to: "{{ hostname }}"
   
 - name: Debugging location outputs
   debug:
