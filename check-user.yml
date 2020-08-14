@@ -3,7 +3,7 @@
   hosts: localhost
   connection: local
   gather_facts: no
-  user: root
+  user: awx
   tasks:
   - name: Checking user
     shell: whoami
