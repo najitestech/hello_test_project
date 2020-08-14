@@ -3,7 +3,7 @@
   hosts: localhost
   connection: local
   gather_facts: no
-  become_user: root
+  become_user: postgres
   tasks: 
   - name: Adding hosts to dynamic inventory
     add_host:
