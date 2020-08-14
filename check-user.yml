@@ -1,0 +1,14 @@
+---
+- name: About to Check the current user
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  become_user: awx
+  tasks:
+  - name: Checking user
+    shell: whoami
+    register: user
+    
+  - name: Debugging
+    debug:
+      var: user
