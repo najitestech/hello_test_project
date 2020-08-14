@@ -16,7 +16,7 @@
     file:
       path: /tmp/awx_289_7_n41bwp/project/Ansible_dir
       mode: 0777
-      state: directory
+      state: absent
     register: dir
   
   - name: Hello Message
