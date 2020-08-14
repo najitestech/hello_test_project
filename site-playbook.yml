@@ -5,17 +5,14 @@
   gather_facts: no
   become_user: postgres
   tasks:
-    - name: Check User
-      command: whoami
-      register: user
-#  - name: Adding hosts to dynamic inventory
-#    add_host:
-#      name: "{{ item }}"
-#      groups: dynamic
-#    with_items: "{{ hostname }}"
-#    changed_when: false
-#  tags:
-#    - always
+  - name: Adding hosts to dynamic inventory
+    add_host:
+      name: "{{ item }}"
+      groups: dynamic
+    with_items: "{{ hostname }}"
+    changed_when: false
+  tags:
+    - always
 
 #- name: Running 'Test' test Playbook
 #  hosts: dynamic
@@ -28,5 +25,5 @@
 #  serial: "100%"
 
   roles:
-    - name: roles/postgres
+#    - name: roles/postgres
 #    - name: roles/installations
