@@ -6,7 +6,11 @@
   tasks:
   - name: Check location
     command: pwd
-    register: hostname
+    register: pwd
+    
+  - name: Hello Message
+    debug:
+      var: pwd
     
   - name: Creat a directory
     file:
