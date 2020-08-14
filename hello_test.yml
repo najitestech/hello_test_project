@@ -1,5 +1,5 @@
 - name: Hello World Sample
-  hosts: hostname
+  hosts: "{{ hostname }}"
   connection: local
   gather_facts: true
   become_user: awx
