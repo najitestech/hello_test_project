@@ -14,16 +14,16 @@
   tags:
     - always
 
-- name: Running 'Test' test Playbook
-  hosts: dynamic
-  ignore_unreachable: false
-  gather_facts: true
-  gather_subset:
-    - '!all'
-    - min
-    - hardware
-  serial: "100%"
+#- name: Running 'Test' test Playbook
+#  hosts: dynamic
+#  ignore_unreachable: false
+#  gather_facts: true
+#  gather_subset:
+#    - '!all'
+#    - min
+#    - hardware
+#  serial: "100%"
 
   roles:
-#    - name: roles/postgres
+    - name: roles/postgres
 #    - name: roles/installations
