@@ -2,11 +2,18 @@
   hosts: "{{ hostname }}"
   connection: local
   gather_facts: true
-  become_user: awx
+  become_user: root
   tasks:
   - name: Check location
     command: hostname
     register: hostname
+    
+  - name: Creat a directory
+    file:
+      path: /Ansible_dir
+      mode: 0755
+      state: directory
+    register: dir
   
   - name: Hello Message
     debug:
