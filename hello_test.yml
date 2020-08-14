@@ -1,6 +1,8 @@
 - name: Hello World Sample
   hosts: localhost
   connection: local
+  gather_facts: true
+  become_user: awx
   tasks:
   - name: Hello Message
     debug:
