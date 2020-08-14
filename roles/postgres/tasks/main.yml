@@ -2,7 +2,7 @@
 - name: Check location
   command: pwd
   register: pwd
-  delegate_to: {{ hostname }}
+  delegate_to: "{{ hostname }}"
   
 - name: Debugging location outputs
   debug:
