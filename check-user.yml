@@ -3,7 +3,7 @@
   hosts: localhost
   connection: local
   gather_facts: no
-  become_user: root
+  user: root
   tasks:
   - name: Checking user
     shell: whoami
