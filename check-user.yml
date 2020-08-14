@@ -11,4 +11,4 @@
     
   - name: Debugging
     debug:
-      msg: The current user is "{{ user }}"
+      var: user
