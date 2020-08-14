@@ -1,5 +1,5 @@
 ---
-- name: Simple select query to acme db
+- name: Simple select query to "{{ db_name }}" db
   postgresql_query:
     db: ntekadmin
     query: SELECT version()
