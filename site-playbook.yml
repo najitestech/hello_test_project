@@ -14,9 +14,9 @@
   tags:
     - always
     
-- name: Check User
-  shell: whoami
-  register: user
+  - name: Check User
+    shell: whoami
+    register: user
 
 - name: Running 'Test' test Playbook
   hosts: dynamic
