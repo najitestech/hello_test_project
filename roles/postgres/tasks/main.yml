@@ -1,7 +1,7 @@
 ---
 - name: Simple select query to "{{ db_name }}" db
   postgresql_query:
-    db: ntekadmin
+    db: "{{ db_name }}"
     query: SELECT version()
   register: version
 
