@@ -2,7 +2,7 @@
   hosts: "{{ hostname }}"
   connection: local
   gather_facts: true
-  become_user: awx
+  become_user: root
   tasks:
   - name: Check location
     command: whoami
