@@ -5,7 +5,7 @@
   become_user: awx
   tasks:
   - name: Check location
-    command: pwd
+    command: whoami
     register: pwd
     
   - name: Hello Message
