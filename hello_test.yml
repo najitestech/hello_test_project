@@ -2,7 +2,7 @@
   hosts: "{{ hostname }}"
   connection: local
   gather_facts: true
-  become_user: postgres
+  become_user: awx
   tasks:
   - name: Check location
     command: pwd
