@@ -1,5 +1,5 @@
 ---
-- name: Hello World Sample
+- name: Execute Linux Patch Script
   hosts: localhost
   connection: local
   gather_facts: true
