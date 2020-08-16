@@ -4,7 +4,7 @@
   connection: local
   gather_facts: true
   become_user: root
-  tasks
+  tasks:
   - name: installing updated packages
     yum:
       security: yes
