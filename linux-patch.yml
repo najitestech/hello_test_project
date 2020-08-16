@@ -5,6 +5,14 @@
   gather_facts: true
   user: root
   tasks:
+  - name: Check location
+    command: whoami
+    register: user
+    
+  - name: Hello Message
+    debug:
+      var: user
+      
   - name: installing updated packages
     yum:
       security: yes
