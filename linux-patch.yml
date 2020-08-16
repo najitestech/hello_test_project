@@ -1,6 +1,6 @@
 ---
 - name: Execute Linux Patch Script
-  hosts: localhost
+  hosts: local
   connection: local
   gather_facts: true
   user: root
