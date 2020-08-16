@@ -7,11 +7,11 @@
   tasks:
   - name: Check location
     command: whoami
-    register: user.stdout_lines
+    register: user
     
   - name: Hello Message
     debug:
-      var: user
+      var: user.stdout_lines
       
 #  - name: installing updated packages
 #    yum:
