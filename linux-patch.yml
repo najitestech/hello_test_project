@@ -3,9 +3,8 @@
   hosts: localhost
   connection: local
   gather_facts: yes
-  become_method: su
   become: true
-  user: root
+  become_user: root
   tasks:
   
   - name: Check location
