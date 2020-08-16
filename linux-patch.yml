@@ -11,7 +11,7 @@
     
   - name: Hello Message
     debug:
-      var: user
+      var: user.stdout
       
 #  - name: installing updated packages
 #    yum:
