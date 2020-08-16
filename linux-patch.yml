@@ -2,9 +2,10 @@
 - name: Execute Linux Patch Script
   hosts: localhost
   connection: local
-  gather_facts: true
+  gather_facts: yes
   user: root
   tasks:
+  
   - name: Check location
     command: whoami
     register: user
