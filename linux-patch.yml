@@ -7,7 +7,7 @@
   tasks:
   - name: Check location
     command: whoami
-    register: user
+    register: user.stdout_lines
     
   - name: Hello Message
     debug:
