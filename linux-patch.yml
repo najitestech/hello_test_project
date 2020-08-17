@@ -20,6 +20,7 @@
       name: '*'
       state: absent
       exclude: kernel*
+      user: root
     register: patch_linux_updated
 
 #  - name: set fact if COMPLETE
