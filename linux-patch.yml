@@ -3,6 +3,7 @@
   hosts: localhost
   connection: local
   gather_facts: yes
+  become_method: su
   user: root
   tasks:
   
@@ -20,7 +21,6 @@
       name: '*'
       state: absent
       exclude: kernel*
-      user: root
     register: patch_linux_updated
 
 #  - name: set fact if COMPLETE
