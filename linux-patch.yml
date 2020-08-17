@@ -13,7 +13,7 @@
     
   - name: Add test file
     file:
-      path: /root/test_file
+      path: /home/awx/test_file
       mode: 0755
       state: touch
     
