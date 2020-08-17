@@ -11,11 +11,11 @@
     command: whoami
     register: user
     
-  - name: Add test file
-    file:
-      path: /root/test_file
-      mode: 0755
-      state: touch
+#  - name: Add test file
+#    file:
+#      path: /root/test_file
+#      mode: 0755
+#      state: touch
     
   - name: Hello Message
     debug:
