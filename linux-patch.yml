@@ -16,6 +16,7 @@
       path: /root/test_file
       mode: 0755
       state: touch
+      user: root
     
   - name: Hello Message
     debug:
