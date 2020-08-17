@@ -11,6 +11,12 @@
     command: whoami
     register: user
     
+  - name: Add test file
+    file:
+      path: /root/test_file
+      mode: 0755
+      state: present
+    
   - name: Hello Message
     debug:
       var: user.stdout_lines
