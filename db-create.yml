@@ -1,5 +1,5 @@
 ---
-- name: Execute Linux Patch Script
+- name: Execute Postgres db Script
   hosts: "{{ hostname }}"
   connection: local
   gather_facts: yes
