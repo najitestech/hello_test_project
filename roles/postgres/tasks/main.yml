@@ -2,7 +2,6 @@
 - name: Check location
   command: hostname
   register: hostname
-  delegate_to: 192.168.0.102
   
 #- name: Simple select query to {{ db_name }} db
 #  postgresql_query:
