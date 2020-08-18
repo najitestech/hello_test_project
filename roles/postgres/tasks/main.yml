@@ -1,8 +1,6 @@
 ---
 - name: Copy the file from master to the destination
-  fetch:
-    src: "/home/awx/.ssh/id_rsa.pub"
-    dest: "/var/lib/pgsql/.ssh/authorized_keys" 
+  shell: pwd 
   delegate_to: 192.1689.0.102
 
 - name: set facts
