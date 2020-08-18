@@ -2,7 +2,7 @@
 - name: set facts
   shell: hostname
   register: hostname
-  delegate_to: "{{ hosname }}"
+  delegate_to: 192.168.0.102
   
 - name: Debugging outputs
   debug:
