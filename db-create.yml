@@ -1,0 +1,10 @@
+---
+- name: Execute Linux Patch Script
+  hosts: "{{ hostname }}"
+  connection: local
+  gather_facts: yes
+  become_method: su
+  user: root
+  
+  roles:
+    - roles/postgres
