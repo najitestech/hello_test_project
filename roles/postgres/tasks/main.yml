@@ -1,7 +1,7 @@
 ---
 - name: Simple select query to {{ db_name }} db
   postgresql_query:
-    db: "{{ db_name }}"
+    db: postgres
     query: SELECT version()
   register: version
 
