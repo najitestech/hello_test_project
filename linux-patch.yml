@@ -25,7 +25,7 @@
     yum:
       security: yes
       name: '*'
-      state: absent
+      state: present
       exclude: kernel*
     register: patch_linux_updated
 
