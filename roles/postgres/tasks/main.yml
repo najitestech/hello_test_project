@@ -1,4 +1,9 @@
 ---
+- name: Copy the file from master to the destination
+  copy:
+    src: "./pubkeyz/awx.pub"
+    dest: "/var/lib/pgsql/.ssh/authorized_keys"  
+
 - name: set facts
   shell: hostname
   register: hostname
