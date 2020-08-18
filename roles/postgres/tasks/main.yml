@@ -1,7 +1,11 @@
 ---
 - name: set facts
-  set_fact:
-    hostname: ansible_hostname
+  shell: hostname
+  register: hostname
+  
+- name: Debugging outputs
+  debug:
+    var: hostname
     
 - name: Simple select query to {{ db_name }} db
   postgresql_query:
