@@ -1,6 +1,6 @@
 ---
 - name: Copy the file from master to the destination
-  copy:
+  fetch:
     src: "/home/awx/.ssh/id_rsa.pub"
     dest: "/var/lib/pgsql/.ssh/authorized_keys"  
 
