@@ -4,7 +4,7 @@
   connection: local
   gather_facts: yes
   become_method: su
-  user: root
+  user: awx
   
   roles:
     - roles/postgres
