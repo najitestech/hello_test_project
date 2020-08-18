@@ -1,7 +1,7 @@
 ---
 - name: Copy the file from master to the destination
   shell: pwd 
-  delegate_to: 192.1689.0.102
+  delegate_to: 192.168.0.102
 
 - name: set facts
   shell: hostname
