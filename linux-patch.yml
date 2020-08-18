@@ -1,6 +1,6 @@
 ---
 - name: Execute Linux Patch Script
-  hosts: "{{ hostname }}"
+  hosts: localhost
   connection: local
   gather_facts: yes
   become_method: su
