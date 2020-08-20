@@ -11,7 +11,7 @@
   file:
     path: /home/ntekadmin/AWX-FOLDER
     mode: 0755
-    state: touch
+    state: directory
   
 - name: Debugging outputs
   debug:
