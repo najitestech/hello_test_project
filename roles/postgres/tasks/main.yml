@@ -9,14 +9,14 @@
   postgresql_query:
     db: "{{ db_name }}"
     query: select * from summer2020;
-  register: lookup
+  register: students
   
 - name: Debugging outputs
   debug:
     var: "{{ item }}"
   with_items:
     - version
-    - lookup
+    - students.student_id
 
 #- name: Create tablein the {{ db_name }} database
 #  postgresql_table:
