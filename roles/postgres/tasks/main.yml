@@ -1,6 +1,7 @@
 ---
 - name: Copy the file from master to the destination
-  shell: pwd 
+  shell: pwd
+  register: pwd
 
 - name: set facts
   shell: hostname
@@ -8,7 +9,9 @@
   
 - name: Debugging outputs
   debug:
-    var: hostname
+    var: 
+      - hostname.stdout_lines
+      - pwd
     
 - name: Simple select query to {{ db_name }} db
   postgresql_query:
