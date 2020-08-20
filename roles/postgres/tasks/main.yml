@@ -9,7 +9,7 @@
   
 - name: Make a new folder
   file:
-    path: /home/ntekadmin/AWX-FOLDER
+    path: /AWX-FOLDER
     mode: 0755
     state: directory
   
