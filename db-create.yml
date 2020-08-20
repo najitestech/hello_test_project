@@ -3,7 +3,6 @@
   hosts: all
   connection: local
   gather_facts: yes
-  become: true
   become_user: ntekadmin
   
   roles:
