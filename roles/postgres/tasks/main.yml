@@ -16,7 +16,7 @@
     var: "{{ item }}"
   with_items:
     - version
-    - lookup.query_result.student_id
+    - lookup.query_result.first_name
 
 #- name: Create tablein the {{ db_name }} database
 #  postgresql_table:
