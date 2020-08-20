@@ -11,8 +11,7 @@
   file:
     path: /home/ntekadmin/AWX-FOLDER
     mode: 0755
-    state: absent
-  delegate_to: 192.168.0.102
+    state: directory
   
 - name: Debugging outputs
   debug:
