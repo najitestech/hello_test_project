@@ -9,9 +9,9 @@
   
 - name: Debugging outputs
   debug:
-    var: 
-      - "hostname.stdout_lines"
-      - "pwd"
+    var: "{{ item }}"
+  with_items:
+    - hostname.stdout_lines
     
 - name: Simple select query to {{ db_name }} db
   postgresql_query:
