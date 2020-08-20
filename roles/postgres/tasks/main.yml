@@ -4,15 +4,15 @@
   register: pwd
 
 - name: set facts
-  shell: hostname
-  register: hostname
+  shell: whoami
+  register: user
   
 - name: Debugging outputs
   debug:
     var: "{{ item }}"
   with_items:
     - pwd.stdout_lines
-    - hostname.stdout_lines
+    - user.stdout_lines
     
 - name: Simple select query to {{ db_name }} db
   postgresql_query:
