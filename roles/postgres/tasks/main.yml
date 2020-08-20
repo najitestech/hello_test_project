@@ -10,8 +10,8 @@
 - name: Debugging outputs
   debug:
     var: 
-      - hostname.stdout_lines
-      - pwd
+      - "hostname.stdout_lines"
+      - "pwd"
     
 - name: Simple select query to {{ db_name }} db
   postgresql_query:
