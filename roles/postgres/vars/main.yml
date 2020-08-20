@@ -1,5 +1,5 @@
 ---
-db_new: build-
+db_new: build_
 db_name: students
 login_host: postgres
 login_user: postgres
