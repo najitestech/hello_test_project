@@ -9,7 +9,7 @@
   postgresql_query:
     db: "{{ db_name }}"
     query: SELECT * FROM students;
-    register: lookup
+  register: lookup
   
 - name: Debugging outputs
   debug:
