@@ -33,6 +33,11 @@
   postgresql_db:
     name: "{{ db_new }}ntek"
     state: "{{ state }}"
+  register: db-create
+    
+- name: Debugging outputs
+  debug:
+    var: db-create
 
 #- name: Drop table foo from schema acm
 #  postgresql_table:
