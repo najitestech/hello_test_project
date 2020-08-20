@@ -1,9 +1,9 @@
 ---
 - name: Execute Postgres db Script
-  hosts: localhost
+  hosts: all
   connection: local
   gather_facts: yes
-  become_method: su
+  become: true
   user: root
   
   roles:
