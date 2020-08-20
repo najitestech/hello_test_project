@@ -16,26 +16,27 @@
     var: "{{ item }}"
   with_items:
     - version
-    - lookup.query_result.first_name
+    - lookup
 
-#- name: Create tablein the {{ db_name }} database
-#  postgresql_table:
-#    db: "{{ db_name }}"
-#    name: "{{ table }}"
-#    owner: "{{ db_name }}"
-#  register: table
+- name: Create tablein the {{ db_name }} database
+  postgresql_table:
+    db: "{{ db_name }}"
+    name: "{{ table }}"
+    owner: "{{ db_name }}"
+  register: table
 
-#- name: Debugging outputs
-#  debug:
-#    var: table
+- name: Debugging outputs
+  debug:
+    var: table
 
-#- name: Create a new database in a tablespace
-#  postgresql_db:
-#    name: "{{ db_name }}_ntek"
-#    state: "{{ state }}"
+- name: Create a new database in a tablespace
+  postgresql_db:
+    name: "{{ db_new }}ntek"
+    state: "{{ state }}"
 
 #- name: Drop table foo from schema acm
 #  postgresql_table:
 #    db: "{{ db_name }}"
 #    name: test1_table
 #    state: "{{ state }}"
+#  tags: drop-db
