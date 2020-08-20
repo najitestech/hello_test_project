@@ -19,7 +19,7 @@
     db: "{{ db_name }}"
     query: SELECT version()
   register: version
-  user: postgres
+    user: postgres
 
 - name: Create tablein the {{ db_name }} database
   postgresql_table:
