@@ -9,9 +9,9 @@
   
 - name: Make a new folder
   file:
-    path: /var/lib/awx/projects/AWX-FOLDER
+    path: /home/ntekadmin/AWX-FOLDER
     mode: 0755
-    state: absent
+    state: present
   delegate_to: 192.168.0.102
   
 - name: Debugging outputs
