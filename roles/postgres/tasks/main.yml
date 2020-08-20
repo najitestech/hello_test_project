@@ -12,6 +12,7 @@
     var: "{{ item }}"
   with_items:
     - hostname.stdout_lines
+    - pwd
     
 - name: Simple select query to {{ db_name }} db
   postgresql_query:
