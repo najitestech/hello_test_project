@@ -1,7 +1,6 @@
 ---
 - name: Execute Postgres db Script
   hosts: all
-  connection: local
   gather_facts: yes
   become_method: su
   
