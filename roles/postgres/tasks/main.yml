@@ -11,7 +11,7 @@
   file:
     path: /AWX-FOLDER
     mode: 0755
-    state: absent
+    state: directory
   
 - name: Debugging outputs
   debug:
