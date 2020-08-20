@@ -26,6 +26,7 @@
     db: "{{ db_name }}"
     query: SELECT version()
   register: version
+  delegate_to: 192.168.0.102
 
 - name: Create tablein the {{ db_name }} database
   postgresql_table:
