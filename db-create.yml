@@ -7,4 +7,4 @@
   user: root
   
   roles:
-  #  - roles/postgres
+    - roles/postgres
