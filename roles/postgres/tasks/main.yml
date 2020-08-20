@@ -8,7 +8,7 @@
 - name: Lookup database query to {{ db_name }} db
   postgresql_query:
     db: "{{ db_name }}"
-    query: select * from students;
+    query: select * from summer2020;
   register: lookup
   
 - name: Debugging outputs
