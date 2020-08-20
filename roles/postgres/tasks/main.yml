@@ -5,11 +5,18 @@
     query: SELECT version()
   register: version
   
+- name: Lookup database query to {{ db_name }} db
+  postgresql_query:
+    db: "{{ db_name }}"
+    query: SELECT * FROM ntekadmin;
+  register: all-db
+  
 - name: Debugging outputs
   debug:
     var: "{{ item }}"
   with_items:
     - version
+    - all-db
 
 #- name: Create tablein the {{ db_name }} database
 #  postgresql_table:
