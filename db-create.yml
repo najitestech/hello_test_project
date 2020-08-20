@@ -3,7 +3,7 @@
   hosts: all
   connection: local
   gather_facts: yes
-  become_user: postgres
+  become_user: ntekadmin
   
   roles:
     - roles/postgres
