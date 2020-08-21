@@ -7,5 +7,6 @@
     state: present
   register: table
 
-- name: Debugging outputs
-  debug:: The {{ table }}_ntek table has been successfully created !!!!
+- name: Debugging table outputs
+  debug:
+    msg: The {{ table }}_ntek table has been successfully created !!!
