@@ -8,3 +8,7 @@
     #priv: "CONNECT/products:ALL"
     #expires: "Jan 31 2021"
   ignore_errors: true
+
+- name: Debugging outputs
+  debug:
+    msg: The {{ db_new }}_ntek database has been successfully created !!!
