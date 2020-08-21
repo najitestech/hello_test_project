@@ -1,5 +1,5 @@
 ---
-- name: Create table in the {{ db_new }} database
+- name: Create table in the {{ db_new }}_ntek database
   postgresql_table:
     db: "{{ db_new }}_ntek"
     name: "{{ table }}_ntek"
