@@ -1,5 +1,5 @@
 ---
-- name: Execute Postgres db Script
+- name: Execute Postgres drop db Script
   hosts: all
   gather_facts: yes
   become: yes
@@ -15,4 +15,15 @@
   - name: Debugging outputs
     debug:
       msg: The "{{ db_new }}_ntek" database has been successfully dropped
-  
+      
+  - name: Connect to "{{ db_new }}ntek" database, drop user
+    postgresql_user:
+      db: "{{ db_new }}_ntek"
+      name: "{{ db_new }}_ntek"
+      password: ceec4eif7ya
+      state: absent
+    ignore_errors: true
+
+  - name: Debugging outputs
+    debug:
+      msg: The user "{{ db_new }}_ntek" has been successfully dropped.
