@@ -26,6 +26,7 @@
     db: "{{ db_new }}ntek"
     name: "{{ db_new }}ntek"
     password: ceec4eif7ya
+    state: "{{ state }}"
     #priv: "CONNECT/products:ALL"
     #expires: "Jan 31 2021"
 
@@ -34,6 +35,7 @@
     db: "{{ db_new }}ntek"
     name: "{{ table }}_ntek"
     owner: "{{ db_new }}ntek"
+    state: "{{ state }}"
   register: table
 
 - name: Debugging outputs
