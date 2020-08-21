@@ -1,0 +1,9 @@
+- name: Create a new database
+  postgresql_db:
+    name: "{{ db_new }}_ntek"
+    state: present
+  register: dbcreate
+    
+- name: Debugging outputs
+  debug:
+    msg: The database "{{ db_new }}_ntek" has been successfully created !!!
