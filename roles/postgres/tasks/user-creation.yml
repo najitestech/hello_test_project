@@ -1,5 +1,5 @@
 ---  
-- name: Connect to {{ db_new }}ntek database, create user, and grant access to database and products table
+- name: Connect to {{ db_new }}_ntek database, create user, and grant access to database and products table
   postgresql_user:
     db: "{{ db_new }}_ntek"
     name: "{{ db_new }}_ntek"
