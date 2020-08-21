@@ -23,9 +23,9 @@
     - min
     - hardware
   serial: "100%"
-  
-- name: Test
-  set_facts: hostname
+  tasks:
+  - name: Test
+    set_facts: hostname
 
   roles:
 #    - name: roles/postgres
