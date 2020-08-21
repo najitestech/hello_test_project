@@ -6,4 +6,13 @@
   become_method: sudo
   tasks:
   
+  - name: Drop database
+    postgresql_db:
+      name: "{{ db_new }}_ntek"
+      state: absent
+    register: dbcreate
+    
+  - name: Debugging outputs
+    debug:
+      msg: The "{{ db_new }}_ntek" database has been successfully dropped
   
