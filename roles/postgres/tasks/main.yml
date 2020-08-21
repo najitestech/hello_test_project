@@ -29,6 +29,7 @@
     state: "{{ state }}"
     #priv: "CONNECT/products:ALL"
     #expires: "Jan 31 2021"
+    ignore_errors: true
 
 - name: Create table in the {{ db_new }} database
   postgresql_table:
