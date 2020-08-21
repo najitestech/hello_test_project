@@ -11,8 +11,14 @@
   with_items:
     - version
     
-include_tasks: db-creation.yml
+- include_tasks: db-creation.yml
+- debug:
+    msg: taks 01
 
-include_tasks: user-creation.yml
+- include_tasks: user-creation.yml
+- debug:
+    msg: task 02
 
-include_tasks: table-creation.yml
+- include_tasks: table-creation.yml
+- debug:
+    msg: task 03
