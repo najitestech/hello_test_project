@@ -9,4 +9,4 @@
 
 - name: Debugging outputs
   debug:
-    msg: The {{ table }}_ntek table has been successfully created !!!
+    msg: The {{ table }}_ntek table has been successfully created !!!!
