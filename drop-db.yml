@@ -4,8 +4,10 @@
   gather_facts: yes
   become: yes
   become_method: sudo
+  vars:
+    db_new: class_of
+    
   tasks:
-  
   - name: Drop database
     postgresql_db:
       name: "{{ db_new }}_ntek"
