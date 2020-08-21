@@ -1,10 +1,9 @@
 ---
 - name: Execute Linux Patch Script
-  hosts: "{{ hostname }}"
-  connection: local
+  hosts: all
   gather_facts: yes
-  become_method: su
-  user: root
+  become: yes
+  become_method: sudo
   tasks:
   
   - name: Check location
