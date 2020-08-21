@@ -13,7 +13,7 @@
     
 - name: Create a new database in a tablespace
   postgresql_db:
-    name: "{{ db_new }}ntek"
+    name: "{{ db_new }}_ntek"
     state: "{{ state }}"
   register: dbcreate
     
@@ -23,8 +23,8 @@
     
 - name: Connect to "{{ db_new }}ntek" database, create user, and grant access to database and products table
   postgresql_user:
-    db: "{{ db_new }}ntek"
-    name: "{{ db_new }}ntek"
+    db: "{{ db_new }}_ntek"
+    name: "{{ db_new }}_ntek"
     password: ceec4eif7ya
     state: "{{ state }}"
     #priv: "CONNECT/products:ALL"
@@ -32,9 +32,9 @@
 
 - name: Create table in the {{ db_new }} database
   postgresql_table:
-    db: "{{ db_new }}ntek"
+    db: "{{ db_new }}_ntek"
     name: "{{ table }}_ntek"
-    owner: "{{ db_new }}ntek"
+    owner: "{{ db_new }}_ntek"
     state: "{{ state }}"
   register: table
 
