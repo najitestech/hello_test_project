@@ -5,5 +5,5 @@ login_host: postgres
 login_user: postgres
 login_pwd: Passwd@
 table: test1
-state: absent
+state: present
 path: /var/lib/pgsql/data/
