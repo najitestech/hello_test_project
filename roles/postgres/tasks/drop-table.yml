@@ -1,0 +1,12 @@
+---
+- name: Drop table in the {{ db_new }} database
+  postgresql_table:
+    db: "{{ db_new }}_ntek"
+    name: "{{ table }}_ntek"
+    owner: "{{ db_new }}_ntek"
+    state: absent
+  register: table
+
+- name: Debugging outputs
+  debug:
+    msg: The table "{{ table }}_ntek" has been successfully dropped.
