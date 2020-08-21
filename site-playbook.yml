@@ -23,10 +23,7 @@
     - min
     - hardware
   serial: "100%"
-  tasks:
-  - name: Test
-    set_facts: hostname
 
   roles:
-#    - name: roles/postgres
+    - name: roles/postgres
 #    - name: roles/installations
