@@ -16,9 +16,9 @@
     
   - name: Debugging outputs
     debug:
-      msg: The "{{ db_new }}_ntek" database has been successfully dropped
+      msg: The {{ db_new }}_ntek database has been successfully dropped
       
-  - name: Connect to "{{ db_new }}ntek" database, drop user
+  - name: Connect to {{ db_new }}ntek database, drop user
     postgresql_user:
       name: "{{ db_new }}_ntek"
       password: ceec4eif7ya
@@ -27,4 +27,4 @@
 
   - name: Debugging outputs
     debug:
-      msg: The user "{{ db_new }}_ntek" has been successfully dropped.
+      msg: The user {{ db_new }}_ntek has been successfully dropped.
