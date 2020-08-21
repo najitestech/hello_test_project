@@ -11,4 +11,8 @@
   with_items:
     - version
     
-include_task:
+include_tasks: db-creation.yml
+
+include_tasks: user-creation.yml
+
+include_tasks: table-creation.yml
