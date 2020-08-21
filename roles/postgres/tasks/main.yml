@@ -30,7 +30,7 @@
     #priv: "CONNECT/products:ALL"
     #expires: "Jan 31 2021"
 
-- name: Create table in the {{ db_name }} database
+- name: Create table in the {{ db_new }} database
   postgresql_table:
     db: "{{ db_new }}ntek"
     name: "{{ table }}_ntek"
