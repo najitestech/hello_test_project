@@ -14,7 +14,7 @@
 - name: Create table in the {{ db_name }} database
   postgresql_table:
     db: "{{ db_name }}"
-    name: "{{ table }}"_ntek
+    name: "{{ table }}_ntek"
     owner: "{{ db_name }}"
   register: table
 
