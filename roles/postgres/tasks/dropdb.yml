@@ -1,4 +1,4 @@
-- name: Create a new database in a tablespace
+- name: Drop database
   postgresql_db:
     name: "{{ db_new }}_ntek"
     state: absent
