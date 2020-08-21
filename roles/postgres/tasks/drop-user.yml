@@ -1,0 +1,14 @@
+---  
+- name: Connect to "{{ db_new }}ntek" database, drop user
+  postgresql_user:
+    db: "{{ db_new }}_ntek"
+    name: "{{ db_new }}_ntek"
+    password: ceec4eif7ya
+    state: absent
+    #priv: "CONNECT/products:ALL"
+    #expires: "Jan 31 2021"
+  ignore_errors: true
+
+- name: Debugging outputs
+  debug:
+    msg: The user "{{ db_new }}_ntek" has been successfully dropped.
