@@ -26,7 +26,7 @@
     db: "{{ db_new }}ntek"
     name: "{{ db_new }}ntek"
     password: ceec4eif7ya
-    priv: "CONNECT/products:ALL"
+    #priv: "CONNECT/products:ALL"
     #expires: "Jan 31 2021"
 
 - name: Create table in the {{ db_name }} database
