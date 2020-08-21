@@ -25,7 +25,7 @@
       security: yes
       name: '*'
       state: present
-      #exclude: kernel*
+      exclude: kernel*
     register: patch_linux_updated
 
   - name: set fact if COMPLETE
