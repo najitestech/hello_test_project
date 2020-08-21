@@ -4,6 +4,6 @@ db_name: students
 login_host: postgres
 login_user: postgres
 login_pwd: Passwd@
-table: test1_table
+table: test1
 state: present
 path: /var/lib/pgsql/data/
