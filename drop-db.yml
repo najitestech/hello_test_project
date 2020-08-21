@@ -1,0 +1,9 @@
+---
+- name: Execute Postgres db Script
+  hosts: all
+  gather_facts: yes
+  become: yes
+  become_method: sudo
+  tasks:
+  
+  
