@@ -20,6 +20,14 @@
 - name: Debugging outputs
   debug:
     var: dbcreate
+    
+- name: Connect to "{{ db_new }}ntek" database, create user, and grant access to database and products table
+  postgresql_user:
+    db: "{{ db_new }}ntek"
+    name: ntekadmin2
+    password: ceec4eif7ya
+    priv: "CONNECT/products:ALL"
+    expires: "Jan 31 2021"
 
 - name: Create table in the {{ db_name }} database
   postgresql_table:
