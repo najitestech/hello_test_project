@@ -12,3 +12,16 @@
 - name: Debugging outputs
   debug:
     msg: The {{ db_new }}_ntek user has been successfully created !!!
+    
+- name: Grant privs to {{ db_new }}_ntek role
+  postgresql_privs:
+    db: "{{ db_new }}_ntek"
+    privs: SELECT,INSERT,UPDATE
+    objs: linux,authors
+    roles: "{{ db_new }}_ntek",reader
+    grant_option: yes
+  register: grant
+  
+- name: Debugging outputs
+  debug:
+    var: grant
