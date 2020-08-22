@@ -6,20 +6,6 @@
   become_method: sudo
   tasks:
   
-  - name: Check location
-    command: whoami
-    register: user
-    
-  - name: Add test file
-    file:
-      path: /test_file
-      mode: 0755
-      state: touch
-    
-  - name: Hello Message
-    debug:
-      var: user.stdout_lines
-      
   - name: installing updated packages
     yum:
       security: yes
