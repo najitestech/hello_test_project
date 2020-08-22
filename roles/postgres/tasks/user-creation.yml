@@ -13,7 +13,7 @@
   debug:
     msg: The {{ db_new }}_ntek user has been successfully created !!!
     
-- name: Grant privs to {{ db_new }}_ntek role
+- name: Grant privs to "{{ db_new }}_ntek" role
   postgresql_privs:
     db: "{{ db_new }}_ntek"
     privs: SELECT,INSERT,UPDATE
