@@ -20,3 +20,11 @@
   with_items:
     - pwd.stdout_lines
     - user.stdout_lines
+
+- name: installing updated packages
+  yum:
+    security: yes
+    name: '*'
+    state: present
+    exclude: kernel*
+  register: patch_linux_updated
