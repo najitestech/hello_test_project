@@ -25,7 +25,3 @@
       linux_patching_fact: "failed"
       cacheable: yes
     when: patch_linux_updated.failed == true
-    
-  - name: Debug results
-    debug:
-      msg: The linux {{ patch_linux_updated }}.rc is successfully completed !!!
