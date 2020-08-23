@@ -13,14 +13,12 @@
   debug:
     msg: The {{ db_new }}_ntek user has been successfully created !!!
 
-#- name: Grant privs to "{{ db_new }}_ntek" role
-#  postgresql_privs:
-#    db: "{{ db_new }}_ntek"
-#    privs: SELECT,INSERT,UPDATE
-#    objs: linux,authors
-#    roles: "{{ db_new }}_ntek"
-#    grant_option: yes
-#  register: grant
+- name: GRANT ALL PRIVILEGES ON DATABASE {{ db_new }}_ntek TO {{ db_new }}_ntek
+  postgresql_privs:
+    db: postgres
+    privs: ALL
+    type: database
+    role: "{{ db_new }}_ntek"
   
 - name: Debugging outputs
   debug:
