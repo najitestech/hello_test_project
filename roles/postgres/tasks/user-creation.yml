@@ -7,7 +7,6 @@
     state: present
     priv:
       - ALL
-      - SELECT
     #expires: "Jan 31 2021"
   ignore_errors: true
 
