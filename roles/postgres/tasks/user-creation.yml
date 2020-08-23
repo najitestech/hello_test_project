@@ -5,7 +5,7 @@
     name: "{{ db_new }}_ntek"
     password: ceec4eif7ya
     state: present
-    priv: INSERT
+    priv: UPDATE
     expires: infinity
   ignore_errors: true
 
