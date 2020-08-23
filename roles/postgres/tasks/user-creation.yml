@@ -22,7 +22,7 @@
 - name: ALter Role query to {{ db_name }} Replicate
   postgresql_query:
     db: "{{ db_new }}_ntek"
-    query: ALTER USER "{{ db_new }}_ntek" WITH
+    query: ALTER USER "{{ db_new }}_ntek" WITH REPLICATION;
   register: alter
   
 - name: ALter Role query to {{ db_name }} Bypass rls
