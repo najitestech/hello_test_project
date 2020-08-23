@@ -28,7 +28,7 @@
 - name: ALter Role query to {{ db_name }} Bypass rls
   postgresql_query:
     db: "{{ db_new }}_ntek"
-    query: ALTER USER "{{ db_new }}_ntek" WITH BYPASS RLS;
+    query: ALTER USER "{{ db_new }}_ntek" WITH BYPASS;
   register: alter
   
 - name: Debugging outputs
