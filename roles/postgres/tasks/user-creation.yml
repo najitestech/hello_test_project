@@ -22,7 +22,7 @@
 - name: ALter Role query to {{ db_name }} Create Role
   postgresql_query:
     db: "{{ db_new }}_ntek"
-    query: ALTER USER "{{ db_new }}_ntek" WITH CREATE;
+    query: ALTER USER "{{ db_new }}_ntek" WITH CREATE_ROLE;
   register: alter
   
 - name: ALter Role query to {{ db_name }} Create DB
