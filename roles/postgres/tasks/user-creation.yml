@@ -23,9 +23,8 @@
 - name: ALter Role query to {{ db_name }} db
   postgresql_query:
     db: "{{ db_new }}_ntek"
-    query: ALTER USER "{{ db_new }}_ntek" WITH "{{ item }}";
+    query: ALTER USER "{{ db_new }}_ntek" WITH SUPERUSER,REPLICATE;
   register: alter
-  with_items: SUPERUSER
   
 - name: Debugging outputs
   debug:
