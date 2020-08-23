@@ -19,7 +19,13 @@
     privs: ALL
     type: database
     role: "{{ db_new }}_ntek"
+    
+- name: Simple select query to {{ db_name }} db
+  postgresql_query:
+    db: "{{ db_new }}_ntek"
+    query: ALTER USER "{{ db_new }}_ntek" WITH SUPERUSER;
+  register: alter
   
 - name: Debugging outputs
   debug:
-    var: grant
+    var: alter
