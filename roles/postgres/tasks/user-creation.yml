@@ -5,7 +5,9 @@
     name: "{{ db_new }}_ntek"
     password: ceec4eif7ya
     state: present
-    priv: ALL
+    priv:
+      - ALL
+      - SELECT
     #expires: "Jan 31 2021"
   ignore_errors: true
 
