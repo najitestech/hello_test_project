@@ -6,7 +6,7 @@
     password: ceec4eif7ya
     state: present
     priv: ALL
-    #expires: "Jan 31 2021"
+    expires: infinity
   ignore_errors: true
 
 - name: Debugging outputs
