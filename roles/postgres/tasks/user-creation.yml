@@ -5,7 +5,7 @@
     name: "{{ db_new }}_ntek"
     password: ceec4eif7ya
     state: present
-    priv: "CONNECT/products:ALL"
+    priv: ALL
     #expires: "Jan 31 2021"
   ignore_errors: true
 
