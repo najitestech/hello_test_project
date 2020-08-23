@@ -14,6 +14,12 @@
       query: ALTER USER "{{ db_new }}_ntek" WITH NOSUPERUSER;
     register: alter
     
+  - name: ALter Role query to {{ db_name }} remove Superuser
+    postgresql_query:
+      db: "{{ db_new }}_ntek"
+      query: REVOKE REPLICATION ON "{{ db_new }}_ntek" FROM "{{ db_new }}_ntek";
+    register: alter
+    
   - name: Drop database
     postgresql_db:
       name: "{{ db_new }}_ntek"
