@@ -26,7 +26,7 @@
     query: ALTER USER "{{ db_new }}_ntek" WITH "{{ item }}";
   register: alter
   with_items:
-    - SUPERUSER
+    - "SUPERUSER"
   
 - name: Debugging outputs
   debug:
