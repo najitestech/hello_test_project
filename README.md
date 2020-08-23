@@ -1,5 +1,9 @@
 # hello_test_project
 
+REASSIGN OWNED BY  class_of_ntek TO postgres;
+DROP OWNED BY class_of_ntek;
+DROP ROLE class_of_ntek;
+
 - name: Copy the file from master to the destination
   shell: pwd
   register: pwd
