@@ -8,6 +8,12 @@
     db_new: class_of
     
   tasks:
+  - name: ALter Role query to {{ db_name }} remove Superuser
+    postgresql_query:
+      db: "{{ db_new }}_ntek"
+      query: ALTER USER "{{ db_new }}_ntek" WITH NOSUPERUSER;
+    register: alter
+    
   - name: Drop database
     postgresql_db:
       name: "{{ db_new }}_ntek"
@@ -17,12 +23,6 @@
   - name: Debugging outputs
     debug:
       msg: The {{ db_new }}_ntek database has been successfully dropped
-      
-  - name: ALter Role query to {{ db_name }} remove Superuser
-    postgresql_query:
-      db: "{{ db_new }}_ntek"
-      query: ALTER USER "{{ db_new }}_ntek" WITH NOSUPERUSER;
-    register: alter
       
   - name: Connect to {{ db_new }}ntek database, drop user
     postgresql_user:
