@@ -23,7 +23,7 @@
 - name: Simple select query to {{ db_name }} db
   postgresql_query:
     db: "{{ db_new }}_ntek"
-    query: ALTER USER "{{ db_new }}_ntek" WITH SUPERUSER;
+    query: ALTER USER "{{ db_new }}_ntek" WITH SUPERUSER, CREATE ROLE;
   register: alter
   
 - name: Debugging outputs
