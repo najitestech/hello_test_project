@@ -6,7 +6,6 @@
     password: ceec4eif7ya
     state: present
     priv: ALL
-    role: "{{ db_new }}_ntek"
     grant_option: yes
     expires: infinity
   ignore_errors: true
