@@ -12,18 +12,35 @@
 - name: Debugging outputs
   debug:
     msg: The {{ db_new }}_ntek user has been successfully created !!!
-
-- name: GRANT ALL PRIVILEGES ON DATABASE {{ db_new }}_ntek TO {{ db_new }}_ntek
-  postgresql_privs:
-    db: postgres
-    privs: ALL
-    type: database
-    role: "{{ db_new }}_ntek"
     
-- name: ALter Role query to {{ db_name }} db
+- name: ALter Role query to {{ db_name }} Superuser
   postgresql_query:
     db: "{{ db_new }}_ntek"
-    query: ALTER USER "{{ db_new }}_ntek" WITH SUPERUSER,REPLICATE;
+    query: ALTER USER "{{ db_new }}_ntek" WITH SUPERUSER;
+  register: alter
+  
+- name: ALter Role query to {{ db_name }} Create Role
+  postgresql_query:
+    db: "{{ db_new }}_ntek"
+    query: ALTER USER "{{ db_new }}_ntek" WITH CREATE ROLE;
+  register: alter
+  
+- name: ALter Role query to {{ db_name }} Create DB
+  postgresql_query:
+    db: "{{ db_new }}_ntek"
+    query: ALTER USER "{{ db_new }}_ntek" WITH CREATE DB;
+  register: alter
+  
+- name: ALter Role query to {{ db_name }} Replicate
+  postgresql_query:
+    db: "{{ db_new }}_ntek"
+    query: ALTER USER "{{ db_new }}_ntek" WITH REPLICATE;
+  register: alter
+  
+- name: ALter Role query to {{ db_name }} Bypass rls
+  postgresql_query:
+    db: "{{ db_new }}_ntek"
+    query: ALTER USER "{{ db_new }}_ntek" WITH BYPASS RLS;
   register: alter
   
 - name: Debugging outputs
