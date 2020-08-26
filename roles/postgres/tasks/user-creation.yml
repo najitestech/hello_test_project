@@ -13,18 +13,18 @@
   debug:
     msg: The {{ db_new }}_ntek user has been successfully created !!!
     
-- name: ALter Role query to {{ db_name }} Superuser
-  postgresql_query:
-    db: "{{ db_new }}_ntek"
-    query: ALTER USER "{{ db_new }}_ntek" WITH SUPERUSER;
-  register: alter
+#- name: ALter Role query to {{ db_name }} Superuser
+#  postgresql_query:
+#    db: "{{ db_new }}_ntek"
+#    query: ALTER USER "{{ db_new }}_ntek" WITH SUPERUSER;
+#  register: alter
   
-- name: ALter Role query to {{ db_name }} Replicate
-  postgresql_query:
-    db: "{{ db_new }}_ntek"
-    query: ALTER USER "{{ db_new }}_ntek" WITH REPLICATION;
-  register: alter
+#- name: ALter Role query to {{ db_name }} Replicate
+#  postgresql_query:
+#    db: "{{ db_new }}_ntek"
+#    query: ALTER USER "{{ db_new }}_ntek" WITH REPLICATION;
+#  register: alter
   
-- name: Debugging outputs
-  debug:
-    var: alter
+#- name: Debugging outputs
+#  debug:
+#    var: alter
