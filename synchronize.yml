@@ -1,0 +1,11 @@
+- name: Copy the file from mwiapp01 to mwiapp02 using Method Pull
+      tags: sync-pull
+      synchronize:
+        src: "{{ item }}"
+        dest: "{{ item }}"
+        mode: pull
+      delegate_to: "{{groups['app'][1]}}"
+      register: syncfile
+      run_once: true
+      with_items:
+       - "/tmp/app01-to-app02.jar"
